@@ -1,0 +1,16 @@
+services:
+  shell:
+    image: caiqueluci0/mfe-app/shell:latest
+    build:
+      context: ..
+      dockerfile: docker/shell/Dockerfile
+    ports:
+      - "4200:80"
+
+  mfe-notes:
+    image: caiqueluci0/mfe-app/notes:latest
+    build:
+      context: ..
+      dockerfile: docker/notes/Dockerfile
+    ports:
+      - "4201:80"
